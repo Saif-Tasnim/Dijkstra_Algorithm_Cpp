@@ -1,0 +1,24 @@
+                        Dijkstra Algorithm Pseudocode
+
+input :->  weighted graph, source
+output :-> distance of all node from source
+
+- create a distance array
+- initialize the array with with infinity
+- d[src] = 0 ; source node distance = 0
+- need a visited array to keep track the node
+
+- for i 0 to n-1 :
+    - pick the unvisited and minimum node (d[node])
+    - visited[node] = 1
+    - for all adj_node of node :
+        d[node] + cost(adj_node,node) < d[adj_node] :
+            d[adj_node] = d[node] + cost (adj_node, node)
+
+
+output the distance array .
+
+=================================================================
+                    Space Complexity ====>  O (n)
+                    Time Complexity  ====>  O (n^2)
+=================================================================
